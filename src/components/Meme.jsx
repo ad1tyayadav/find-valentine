@@ -1,10 +1,10 @@
 import React from "react";
 
 const memes = [
-  "https://indianmemetemplates.com/wp-content/uploads/abe-loude-apna-kaam-kar-bhsdike.jpg",
-  "https://scrolldroll.com/wp-content/uploads/2024/08/Bhagam-Bhag-Movie-Dialogues-019.jpg",
-  "https://indianmemetemplates.com/wp-content/uploads/raha-nahi-jaata-tadap-hi-aisi-hai.jpg",
-  "https://media.tenor.com/JGKaieuPFZIAAAAe/padhai-kyu-nhai-ho-rahi-padhai.png"
+  "meme1.jpg",
+  "meme2.jpg",
+  "meme3.jpg",
+  "meme4.jpg"
 ];
 
 const Meme = () => {
