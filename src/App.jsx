@@ -19,6 +19,7 @@ const App = () => {
   const [name, setName] = useState("");
   const [gender, setGender] = useState("");
   const [age, setAge] = useState("");
+  const [city, setCity] = useState("");
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -53,7 +54,7 @@ const App = () => {
         rel="noopener noreferrer"
         className="absolute top-4 right-4 bg-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2 hover:bg-gray-100 transition"
       >
-        <GrGithub/> Give it a Star
+        <GrGithub /> Give it a Star
       </a>
 
       <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 animate-glow">
@@ -69,6 +70,8 @@ const App = () => {
             setGender={setGender}
             age={age}
             setAge={setAge}
+            city={city}
+            setCity={setCity}
             handleSubmit={handleSubmit}
           />
         ) : loading ? (

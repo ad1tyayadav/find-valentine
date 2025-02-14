@@ -1,6 +1,6 @@
 import React from "react";
 
-const Form = ({ name, setName, gender, setGender, age, setAge, handleSubmit }) => (
+const Form = ({ name, setName, gender, setGender, age, setAge, city, setCity, handleSubmit }) => (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
             type="text"
@@ -21,8 +21,8 @@ const Form = ({ name, setName, gender, setGender, age, setAge, handleSubmit }) =
         <input
             type="text"
             placeholder="Enter your City"
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
             className="p-2 border rounded"
             required
         />
