@@ -1,10 +1,8 @@
 import React from "react";
 
-// Array of funny quotes
 const funnyQuotes = [
   "Padh le behan, teri to roti bhi gol nahi hoti! 😂",
-  "Engineering mat kar, shaadi bhi na ho paayegi! 😆",
-  "Study harder, warna Tinder bhi swipe left karega! 🤣",
+  "Kitne bure din chal rhe hai tere ki tujhe ye sab site use karni pad rhi hai :)",
   "Sharma ji ki beti banne ka time aa gaya! 📚",
   "Focus on your studies, warna arranged marriage pakki hai! 💀",
 ];
