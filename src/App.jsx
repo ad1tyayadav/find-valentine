@@ -3,6 +3,7 @@ import MemeComponent from "./components/Meme";
 import VideoGrid from "./components/Videos";
 import FloatingHearts from "./components/FlotingHearts";
 import Form from "./components/Form";
+import GirlPage from "./components/GirlPage"; // Import new component
 import "./index.css";
 import { GrGithub } from "react-icons/gr";
 
@@ -22,23 +23,20 @@ const App = () => {
   const [city, setCity] = useState("");
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [showVideos, setShowVideos] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     setResult(null);
+    setShowVideos(false);
 
     setTimeout(() => {
       setLoading(false);
+      setShowVideos(true);
+
       if (gender === "female") {
-        setResult({
-          type: "profile",
-          content: {
-            name: name || "Your Name",
-            image: "https://pbs.twimg.com/profile_images/1789602721227739136/caT3CY4z_400x400.jpg",
-            description: `Hi ${name || "there"}! Aditya is your Valentine! 💖`,
-          },
-        });
+        setResult({ type: "girlPage" });
       } else {
         setResult({ type: "meme" });
       }
@@ -76,33 +74,14 @@ const App = () => {
           />
         ) : loading ? (
           <LoadingComponent />
-        ) : result.type === "profile" ? (
-          <div className="text-center">
-            <img
-              src={result.content.image}
-              alt="Profile"
-              className="w-32 h-32 rounded-full mx-auto mb-2 shadow-lg"
-            />
-            <h3 className="text-xl font-bold text-red-600 animate-pulse">
-              Hi {result.content.name}, Aditya is your Valentine! 💖
-            </h3>
-            <p className="text-gray-700 italic">"Love is in the air, and so are DMs! 💌"</p>
-
-            <a
-              href="https://www.instagram.com/aditya__yadav.10/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-4 inline-block bg-red-500 text-white px-4 py-2 rounded-lg shadow-md hover:bg-red-700 transition transform hover:scale-105"
-            >
-              💬 Message Now
-            </a>
-          </div>
+        ) : result.type === "girlPage" ? (
+          <GirlPage />
         ) : (
           <MemeComponent />
         )}
       </div>
 
-      {result?.type === "meme" && <VideoGrid />}
+      {showVideos && <VideoGrid />}
 
       <footer className="mt-10 text-white text-sm">
         Made with ❤️ by Aditya

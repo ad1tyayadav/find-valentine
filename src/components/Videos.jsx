@@ -12,7 +12,7 @@ const VideoGrid = () => {
   return (
     <div className="bg-transparent w-full text-white py-8 px-4">
       <h2 className="text-2xl text-black font-bold text-center mb-6">
-        Padh Le bhai <b className="text-pink-500">Valentine</b> se ghar nahi chlta :(
+        Bete <b className="text-pink-500">Valentine</b> se ghar nahi chlta :(
       </h2>
       <div className="grid grid-cols-1 text-black sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {youtubeVideos.map((video, index) => (
